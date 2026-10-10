@@ -1,0 +1,26 @@
+name: NexusPath
+version: ${project.version}
+main: com.nexuscraft.nexuspath.PathPlugin
+api-version: '1.21'
+author: Nexus Universe
+description: Choose how you play. The server hides every system you did not pick, so the game fits you.
+softdepend: [NexusTutorial, NexusMenu]
+
+commands:
+  path:
+    description: Choose your play style, see what is hidden, or borrow a hidden system for a while.
+    aliases: [playstyle, mygame]
+    permission: nexuspath.use
+    permission-message: You cannot choose a play style here.
+    usage: /path [open|info [name]|status|try <system>|everything|reset]
+
+permissions:
+  nexuspath.use:
+    description: Choose a play style.
+    default: true
+  nexuspath.admin:
+    description: Set, show, hide and reset play styles for players; reload, check and the event gate.
+    default: op
+  nexuspath.bypass:
+    description: Nothing is ever hidden from this player (give it to staff who need to see everything). Off for everyone, ops included, by default.
+    default: false

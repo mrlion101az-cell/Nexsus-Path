@@ -1,0 +1,38 @@
+# NexusPath -- your own changes to the catalog. This file is never overwritten by updates.
+# Run /path reload after editing. /path check lists anything that does not add up.
+#
+# The built-in catalog (in the jar) has one SYSTEM for each Nexus plugin and eight play STYLES. Anything
+# you write here is laid on top of it:
+#
+#   - a system or style with an id that already exists is changed field by field
+#   - a new id adds one
+#   - hidden-systems / hidden-styles take them away
+#
+# systems:
+#   NexusRime:
+#     blurb: "Hordes come with the snow."     # name, icon, blurb
+#     default: true                           # on for everybody whatever styles they pick
+#   NexusChaos:
+#     events: false                           # never skip this plugin's event handlers (commands still hidden)
+#   NexusEconomy:
+#     locked: false                           # locked = always on for everybody, never hidden (the default for money, claims, safety)
+#   NexusMyNewPlugin:                         # a new plugin the catalog has never heard of
+#     name: "My New Thing"
+#     icon: EMERALD
+#     blurb: "What it does, in one line."
+#
+# styles:
+#   builder:
+#     add-systems: [NexusMyNewPlugin]         # add or take away systems...
+#     remove-systems: [NexusHats]
+#   hardcore:                                 # ...or make a new style
+#     title: "Hardcore"
+#     icon: WITHER_SKELETON_SKULL
+#     blurb: "Nothing is forgiven."
+#     systems: [NexusSurvival, NexusVitals, NexusHorror]
+#
+# hidden-styles: [spooky]
+# hidden-systems: [NexusBathroom]
+
+systems: {}
+styles: {}

@@ -1,0 +1,54 @@
+# NexusPath -- choose how you play, and the server fits itself around you.
+#
+# Every Nexus plugin is a "system". A player picks play styles (bundles of systems) and the server hides
+# everything they did not pick: the commands, the tab-list entries, and what those plugins do to them
+# in the world. What counts as a system, and which styles exist, is in the catalog; to change it, edit
+# plugins/NexusPath/custom-catalog.yml (it explains itself), then /path reload.
+#
+# Messages understand &-colour codes.
+
+# A Nexus plugin that no style names and that has no catalog entry:
+#   show = everybody keeps it until you add it to a style       hide = hidden from anyone who has chosen
+unassigned: show
+
+invite:
+  # join = anyone who has not chosen yet is reminded when they join (see max-reminders)    off = nobody
+  mode: join
+  delay-seconds: 90
+  # After this many reminders (one per login) they are left alone. /path always works.
+  max-reminders: 3
+
+try:
+  # How long a hidden system can be borrowed with /path try.
+  minutes: 10
+
+events:
+  # Hides what other plugins DO to a player (their event handlers are skipped for players who hid them).
+  # Turn off if a plugin misbehaves; commands and menus stay hidden either way. Same switch as /path gate off.
+  enabled: true
+
+tutorial:
+  # With NexusTutorial: opening the picker when a player finishes certain lessons. Put this in
+  # plugins/NexusTutorial/config.yml:   rewards: lesson-commands: ["path offer {player} {lesson}"]
+  # and list here the lesson ids (see /tutorial list) that should end with "now choose how you play".
+  # The picker only opens for players who have not chosen yet. A lesson of your own that ends the tour
+  # is the neatest (the README has one to copy).
+  offer-after-lessons: []
+
+export:
+  # Tell other plugins which systems a player hid, without them needing NexusPath:
+  #   permission nexuspath.hidden.<pluginname in lower case>   (true while hidden)
+  permissions: true
+  #   the player's persistent data nexuspath:hidden            (comma separated plugin names)
+  metadata: true
+
+messages:
+  prefix: "&b&l[Path] &r"
+  invite: "&eWelcome! Choose how you want to play and the server will fit itself around you: &f/path"
+  saved: "&aYour game is set: {styles}. &f{shown} &asystems on, &f{hidden} &ahidden. Change your mind any time with &f/path&a."
+  everything: "&aYou chose everything: nothing is hidden. &f/path&a changes that."
+  blocked: "&7{system} is not part of the game you chose. &e/path try {id}&7 borrows it for {minutes} minutes, or &e/path&7 to change your game."
+  try-start: "&aBorrowing &f{system}&a for {minutes} minutes."
+  try-end: "&e{system}&7 goes back out of your game."
+  try-no: "&cYou cannot borrow that: {why}"
+  reset: "&7Your choices are cleared: you see everything again. &f/path&7 to choose."

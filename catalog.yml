@@ -1,0 +1,538 @@
+# NexusPath catalog: the systems a player can choose between, and the play styles that bundle them.
+#
+# A SYSTEM is one Nexus plugin (its id is the plugin's name). A STYLE is a named bundle of systems.
+# This file ships inside the jar and is replaced when the plugin updates. To change anything, edit
+# plugins/NexusPath/custom-catalog.yml instead (it is explained there) and run /path reload.
+#
+# Per system:
+#   name / icon / blurb   what the picker shows
+#   locked: true          always on for everybody (safety, claims, money, moderation, staff tools): never hidden
+#   world: true           shared with everyone; hiding it only stops what the player does themselves
+#   events: false         do not gate this plugin's event handlers for hidden players (commands are still hidden)
+#   default: true         on for everyone unless they turn it off, whatever styles they pick
+
+systems:
+
+  # --- Getting Started
+  NexusMenu:
+    name: "Nexus Hub and Codex"
+    icon: ENCHANTED_BOOK
+    blurb: "One menu that reaches every system on the server, no commands needed."
+    locked: true
+  NexusStarter:
+    name: "Your Starter Guide"
+    icon: COMPASS
+    blurb: "A guide book and menu that explains every system on the server."
+    locked: true
+  NexusSeasons:
+    name: "Seasons & Weather"
+    icon: SUNFLOWER
+    blurb: "Spring, summer, fall and winter change plants, mobs and the sky."
+    locked: true
+  NexusAchievements:
+    name: "Achievements"
+    icon: KNOWLEDGE_BOOK
+    blurb: "Milestones from all over the server, with a pop-up toast."
+    default: true
+  NexusEndeavors:
+    name: "Daily Endeavors"
+    icon: CLOCK
+    blurb: "Daily and weekly goals, a login streak, and a cosmetics shop."
+    default: true
+  NexusSentinel:
+    name: "Safety and Reporting"
+    icon: BELL
+    blurb: "How to report a problem fast, and how the server helps keep chat safe."
+    locked: true
+  NexusGuardian:
+    name: "Age Groups and Safety"
+    icon: SHIELD
+    blurb: "Verify your age group so you only play with players in your own group."
+    locked: true
+  NexusSpawn:
+    name: "Spawn Protection"
+    icon: SHIELD
+    blurb: "Spawn is protected, but you can still use doors, chests and buttons."
+    locked: true
+  NexusResourcePacks:
+    name: "Choose Your Resource Pack"
+    icon: PAINTING
+    blurb: "Pick the server resource pack you like, or play without one."
+    locked: true
+  NexusDenyBlocks:
+    name: "Protected Zones"
+    icon: BEDROCK
+    blurb: "Staff-placed Deny Blocks protect a cube of land from building and damage."
+    locked: true
+
+  # --- Money & Land
+  NexusEconomy:
+    name: "Money and Shopping"
+    icon: EMERALD
+    blurb: "Bank, shop, auctions, credit and stocks all in one."
+    locked: true
+  NexusRealms:
+    name: "Land Claims & Teams"
+    icon: GOLDEN_SHOVEL
+    blurb: "Form a country, claim land, and protect your builds."
+    locked: true
+  NexusBackpacks:
+    name: "Backpacks"
+    icon: BUNDLE
+    blurb: "A carryable backpack that upgrades over time and unlocks handy abilities."
+    default: true
+  NexusEnderChest:
+    name: "Huge Ender Chest"
+    icon: ENDER_CHEST
+    blurb: "Your ender chest now has 20 pages of storage."
+    default: true
+  NexusMerchants:
+    name: "Smarter Villager Trading"
+    icon: EMERALD
+    blurb: "Villagers have tiers, price memory and reputation with you."
+    default: true
+  NexusCreativeSurvival:
+    name: "Creative Mode Costs"
+    icon: GOLD_NUGGET
+    blurb: "Creative blocks cost coins, and you must eat once an hour."
+
+  # --- Skills & Crafting
+  NexusHusbandry:
+    name: "Animal Breeding and Care"
+    icon: WHEAT
+    blurb: "Breed better livestock, keep them happy and healthy, and chase prime specimens."
+  NexusAlchemy:
+    name: "Brewing and Alchemy"
+    icon: BREWING_STAND
+    blurb: "Order matters: brew strange potions and level up your brewing."
+  NexusCuisine:
+    name: "Cooking and Food"
+    icon: COOKED_BEEF
+    blurb: "Cook better food as you level, keep it fresh, and watch villager prices."
+  NexusCrafting:
+    name: "Crafting Mastery"
+    icon: CRAFTING_TABLE
+    blurb: "Level up by crafting for bonus items, better gear, and secret recipes."
+  NexusEnchants:
+    name: "Custom Enchantments"
+    icon: ENCHANTED_BOOK
+    blurb: "Extra enchantments like Lava Walker and Tide Walker for your gear."
+  NexusMagic:
+    name: "Elemental Magic"
+    icon: BLAZE_ROD
+    blurb: "Craft elemental staves and bows, and level up as a wizard."
+  NexusAngler:
+    name: "Fishing and Ponds"
+    icon: FISHING_ROD
+    blurb: "Ponds run out of fish, bait changes your luck, skill unlocks rare catches."
+  NexusSmelting:
+    name: "Furnace Mastery"
+    icon: FURNACE
+    blurb: "Smelting ore builds a skill: faster furnaces, bonus ingots, and risks."
+  NexusForge:
+    name: "Gear Wear and Repair"
+    icon: ANVIL
+    blurb: "Iron, diamond and netherite gear wears down. Repair it at an anvil."
+  NexusFarming:
+    name: "Golden Hoe Farming"
+    icon: GOLDEN_HOE
+    blurb: "Auto-replant, bonus crops and whole-field harvests with a golden hoe."
+  NexusHats:
+    name: "Hats and Accessories"
+    icon: LEATHER_HELMET
+    blurb: "Wear any block or item as a hat, or on top of or behind your head."
+  NexusIndustry:
+    name: "Machines and Androids"
+    icon: PISTON
+    blurb: "Machines, androids and special items, unlocked by clearance."
+  NexusLode:
+    name: "Mining Skill and Veins"
+    icon: IRON_PICKAXE
+    blurb: "Level up mining, vein-mine ores and find ore with a Prospector's Rod."
+  NexusStyle:
+    name: "Outfits and Dyeing"
+    icon: LEATHER_CHESTPLATE
+    blurb: "Save outfits, dye leather armor at a Loom, and join the Fashion Show."
+  NexusCraftersGuild:
+    name: "The Crafters Guild"
+    icon: CRAFTER
+    blurb: "Become a blacksmith with Auto Crafters, contracts, and world events."
+  NexusArcanum:
+    name: "The Enchanting Table"
+    icon: ENCHANTING_TABLE
+    blurb: "Build a better bookshelf ring for rarer, stronger enchantments."
+  NexusTitles:
+    name: "Titles, Colors & Names"
+    icon: NAME_TAG
+    blurb: "Pick a chat title, banner, name color, font and roleplay nickname."
+    default: true
+  NexusWands:
+    name: "Wands and Spells"
+    icon: STICK
+    blurb: "Bond a wand, learn spell pages, and speak incantations in chat."
+  NexusMap:
+    name: "Your World Map"
+    icon: FILLED_MAP
+    blurb: "A live map in your hand that follows you around."
+    default: true
+
+  # --- Survival & Adventure
+  NexusFrontier:
+    name: "Bounties and Caravans"
+    icon: GOLD_INGOT
+    blurb: "Put bounties on players and trade between posts for profit."
+  NexusIntegrity:
+    name: "Building Support"
+    icon: STONE_BRICKS
+    blurb: "Builds need support. Remove too much and blocks crack and fall."
+    world: true
+    events: false
+  NexusCombat:
+    name: "Combat Streaks and Gear"
+    icon: IRON_SWORD
+    blurb: "Chain hits for bonus damage, eat for buffs, wear sets for power."
+  NexusDrones:
+    name: "Drones and Security"
+    icon: SPYGLASS
+    blurb: "Drones, turrets and a security suite for keeping watch."
+  NexusGrave:
+    name: "Graves and Corpse Runs"
+    icon: PLAYER_HEAD
+    blurb: "When you die, your items wait in a grave that slowly decays."
+  NexusMigrations:
+    name: "Great Migrations"
+    icon: COW_SPAWN_EGG
+    blurb: "Huge herds roam the map, peaceful or dangerous."
+    world: true
+    events: false
+  NexusGrowth:
+    name: "Growing Up"
+    icon: WHEAT_SEEDS
+    blurb: "You start small and grow slowly over real years."
+  NexusHatchlings:
+    name: "Hatchling Crystals"
+    icon: AMETHYST_SHARD
+    blurb: "Shrink and tame a mob with a thrown crystal, then watch it grow up."
+  NexusLegends:
+    name: "Legendary Cryptids & Relics"
+    icon: DRAGON_HEAD
+    blurb: "One-of-a-kind creatures, cash bounties and powerful relics."
+  NexusDungeons:
+    name: "Maze Dungeons"
+    icon: SKELETON_SKULL
+    blurb: "Huge underground mazes with traps, crypts, treasure, and a boss."
+  NexusGiants:
+    name: "Mob Ages and Giants"
+    icon: ZOMBIE_SPAWN_EGG
+    blurb: "Mobs have ages that decide their size, from tiny to huge."
+  NexusWards:
+    name: "Mob Wards"
+    icon: ARMOR_STAND
+    blurb: "Craft a statue that keeps one kind of mob away from your base."
+    world: true
+    events: false
+  NexusExpeditions:
+    name: "Party Expeditions"
+    icon: COMPASS
+    blurb: "Team up for Hunt or Explore trips and earn bigger XP rewards together."
+  NexusCompanions:
+    name: "Pet Companions"
+    icon: BONE
+    blurb: "Adopt a wolf, cat, or parrot, feed it, level it up, and bring it along."
+  NexusPortals:
+    name: "Portal Network"
+    icon: OBSIDIAN
+    blurb: "Named Nether portals, a travel menu, upkeep and stronghold tracking."
+  NexusRails:
+    name: "Rail Network"
+    icon: MINECART
+    blurb: "Stations, routes, and furnace minecarts that drive themselves."
+    world: true
+    events: false
+  NexusHydro:
+    name: "Real Water and Lava"
+    icon: WATER_BUCKET
+    blurb: "Ponds can run dry and broken dams really flood. Oceans stay endless."
+    world: true
+    events: false
+  NexusRedstone:
+    name: "Redstone Engineering"
+    icon: REDSTONE
+    blurb: "Logic gates, clocks, wireless signals, smarter hoppers, and an Engineer skill."
+  NexusHorror:
+    name: "Sanity and Blood Moons"
+    icon: SCULK_SENSOR
+    blurb: "A Sanity meter, spooky sightings and a Blood Moon event."
+  NexusSomnus:
+    name: "Sleep and Dreams"
+    icon: RED_BED
+    blurb: "Sleep debt, dreams, and beds that only become home after a full rest."
+  NexusMinds:
+    name: "Smarter Mobs"
+    icon: ZOMBIE_HEAD
+    blurb: "Zombies, skeletons and pillagers have personalities, grudges and pack tactics."
+  NexusVitals:
+    name: "Stamina, Injury & Gas"
+    icon: PAPER
+    blurb: "Stamina, injuries, collapses, toxic gas and stealth."
+  NexusRime:
+    name: "The Long Winter"
+    icon: BLUE_ICE
+    blurb: "Winter hordes, a frost boss, and dragonglass weapons."
+  NexusRequiem:
+    name: "The Thinning Veil"
+    icon: SOUL_LANTERN
+    blurb: "When many players die in a short time, the world grows more dangerous."
+    world: true
+  NexusUndertow:
+    name: "The Undertow"
+    icon: IRON_PICKAXE
+    blurb: "Over-mine or over-farm a chunk and the world fights back."
+    world: true
+    events: false
+  NexusSurvival:
+    name: "Thirst, Disease & Climate"
+    icon: WATER_BUCKET
+    blurb: "Stay hydrated, stay healthy, and dress for the weather."
+  NexusLegion:
+    name: "Tiny Animal Army"
+    icon: GOAT_HORN
+    blurb: "Recruit small animals into a tiny army and command it with a War Horn."
+  NexusMomentum:
+    name: "Traversal Skill and Stamina"
+    icon: DIAMOND_BOOTS
+    blurb: "Travel to level up: run faster, jump higher, fall softer, unlock new moves."
+  NexusWarbeasts:
+    name: "Truce Crystals"
+    icon: PRISMARINE_SHARD
+    blurb: "Make hostile mobs stop attacking you, then lead them like livestock."
+  NexusVice:
+    name: "Vice (Fictional Substances)"
+    icon: FERMENTED_SPIDER_EYE
+    blurb: "A fictional potion-and-drink system with real in-game risks."
+  NexusEvents:
+    name: "World Events"
+    icon: FIRE_CHARGE
+    blurb: "Random server-wide events: meteors, invasions, storms and blessings."
+    world: true
+    events: false
+
+  # --- Community & Fun
+  NexusBloodline:
+    name: "Bloodline Traits"
+    icon: WHEAT
+    blurb: "Kids inherit a trait from how their parents really play."
+  NexusOddities:
+    name: "Body Oddities"
+    icon: SLIME_BALL
+    blurb: "Random harmless body quirks: shrinking, glowing, hiccups."
+  NexusPareidolia:
+    name: "Cave Whispers"
+    icon: SCULK_SENSOR
+    blurb: "Spooky cave sounds that only you hear. None of it is real."
+  NexusEchoes:
+    name: "Echo Runes"
+    icon: ECHO_SHARD
+    blurb: "Leave a spoken message at a spot for others to hear later."
+  NexusBathroom:
+    name: "Gotta Go (Comedy)"
+    icon: CAULDRON
+    blurb: "A silly bathroom meter with no penalties, just jokes."
+  NexusHouses:
+    name: "Great Houses"
+    icon: WHITE_BANNER
+    blurb: "Found a noble House with a sigil, banner and motto, and form alliances."
+  NexusWarfare:
+    name: "Keeps and Warfare"
+    icon: SHIELD
+    blurb: "House alliances fight to hold keeps and crown an Emperor."
+  NexusMorality:
+    name: "Kindness & Karma"
+    icon: GOLDEN_APPLE
+    blurb: "Injured survivors to help, plus helpful hints when you get hurt."
+  NexusFolklore:
+    name: "Living Legends"
+    icon: BOOK
+    blurb: "Real deaths and explosions become legends that villagers retell."
+  NexusAmbience:
+    name: "Living Sounds"
+    icon: NOTE_BLOCK
+    blurb: "Birds, crowds and distant rumbles that make the world feel alive."
+    world: true
+  NexusCitizens:
+    name: "Living Towns"
+    icon: VILLAGER_SPAWN_EGG
+    blurb: "Villagers and animals fill built-up towns so they never feel empty."
+    world: true
+    events: false
+  NexusFamily:
+    name: "Marriage and Kids"
+    icon: PINK_TULIP
+    blurb: "Marry another player and raise a baby villager together."
+  NexusChaos:
+    name: "Random Pranks"
+    icon: FIREWORK_STAR
+    blurb: "Surprise pranks hit at random, and chat always explains them."
+  NexusDecor:
+    name: "Rooms and Decor"
+    icon: FLOWER_POT
+    blurb: "Claim a room, decorate it, score it, and show it off in the gallery."
+  NexusShackles:
+    name: "Shackles (Roleplay)"
+    icon: LEAD
+    blurb: "A roleplay tool for jail and prison scenes."
+    locked: true
+  NexusWildcard:
+    name: "Strange Mob Happenings"
+    icon: LEAD
+    blurb: "Rare, harmless mob spectacles you might stumble across."
+  NexusArrival:
+    name: "Strange Visions"
+    icon: ENDER_EYE
+    blurb: "Spooky sights and sounds that only you can see. Totally harmless."
+  NexusChronicle:
+    name: "The Chronicle"
+    icon: WRITTEN_BOOK
+    blurb: "A server-wide story told in chapters, with title cards and a boss bar."
+  NexusPulse:
+    name: "The Daily Pulse"
+    icon: WRITTEN_BOOK
+    blurb: "A newspaper that catches you up on what happened while you were away."
+  NexusThreshold:
+    name: "The Land Remembers"
+    icon: DIRT_PATH
+    blurb: "Where players walk, fight and gather, the land slowly changes."
+    world: true
+    events: false
+  NexusOracle:
+    name: "The Oracle"
+    icon: ENDER_EYE
+    blurb: "A prophecy built only from real, current server facts."
+
+  # --- Staff Tools
+  NexusLogs:
+    name: "Activity Logs & Rollback"
+    icon: WRITABLE_BOOK
+    blurb: "Staff tool for login stats, activity lookups and block rollback."
+    locked: true
+  NexusCmdTracker:
+    name: "Command Block Finder"
+    icon: REPEATING_COMMAND_BLOCK
+    blurb: "Find, filter and teleport to every command block in the world."
+    locked: true
+  NexusGate:
+    name: "Join Password Gate"
+    icon: IRON_DOOR
+    blurb: "A join password, separate for Java and Bedrock, with lockouts."
+    locked: true
+  NexusMobShield:
+    name: "Mob Shield"
+    icon: SHIELD
+    blurb: "Staff tool that blocks the vanilla kill command against mobs."
+    locked: true
+  NexusNPC:
+    name: "NPC Framework"
+    icon: VILLAGER_SPAWN_EGG
+    blurb: "Staff tool for creating villager, mob and skinned player NPCs."
+    locked: true
+  NexusPrison:
+    name: "Prison and Release"
+    icon: IRON_BARS
+    blurb: "Confine listed players to a zone, then free them on a real-world timer."
+    locked: true
+  NexusPurgatory:
+    name: "Purgatory Penalty"
+    icon: SOUL_SAND
+    blurb: "A harsh, escalating penalty for specific listed players. Last-resort staff tool."
+    locked: true
+  NexusTerra:
+    name: "Real-World Terrain"
+    icon: GRASS_BLOCK
+    blurb: "Staff tool that builds real places from map data."
+    locked: true
+  NexusAdmin:
+    name: "Staff Powers and the Admin Panel"
+    icon: COMMAND_BLOCK
+    blurb: "Vanish, god mode, fly, freeze, smite and more, all logged for oversight."
+    locked: true
+  NexusVault:
+    name: "The Vault"
+    icon: BEDROCK
+    blurb: "A sealed region with clearance-only entry and unbreakable bedrock."
+    locked: true
+  NexusWeatherReport:
+    name: "Weather Report Panel"
+    icon: LIGHTNING_ROD
+    blurb: "A personal weather forecast menu built for one specific player."
+  NexusScan:
+    name: "World Map Scanner"
+    icon: SPYGLASS
+    blurb: "Staff tool that scans explored chunks and sends map tiles to the website."
+    locked: true
+  NexusHeartbeat:
+    name: "World Mood"
+    icon: HEART_OF_THE_SEA
+    blurb: "A shared server mood that other plugins feed into."
+    locked: true
+
+  # --- Added later (no lesson in NexusTutorial yet)
+  NexusSpawnShield:
+    name: "Spawn Shield"
+    icon: SHIELD
+    blurb: "No killing, breaking or placing around world spawn; doors, chests and buttons still work."
+    locked: true
+  NexusKairos:
+    name: "Kairos"
+    icon: ECHO_SHARD
+    blurb: "A slow-thinking presence that reads the server's history and, rarely, decides to act."
+    world: true
+  NexusPennywise:
+    name: "Pennywise"
+    icon: SKELETON_SKULL
+    blurb: "Learns what each player dies to most and stages a matching scare."
+  NexusMobCrossbow:
+    name: "Mob Crossbows"
+    icon: CROSSBOW
+    blurb: "Crossbows that fire a live mob instead of an arrow."
+
+styles:
+  builder:
+    title: "Builder"
+    icon: BRICKS
+    blurb: "You build things that last: rooms, rails, machines, farms and a little order in the world."
+    systems: [NexusDecor, NexusStyle, NexusHats, NexusRedstone, NexusRails, NexusIndustry, NexusIntegrity, NexusCitizens, NexusAmbience, NexusFarming, NexusHusbandry, NexusAngler, NexusPortals, NexusCreativeSurvival]
+  crafter:
+    title: "Crafter"
+    icon: SMITHING_TABLE
+    blurb: "You make the good stuff: forge, brew, cook, enchant and dig for it."
+    systems: [NexusCrafting, NexusCraftersGuild, NexusSmelting, NexusForge, NexusAlchemy, NexusCuisine, NexusArcanum, NexusEnchants, NexusLode, NexusFarming, NexusAngler, NexusHusbandry]
+  adventurer:
+    title: "Adventurer"
+    icon: COMPASS
+    blurb: "Dungeons, legends, companions and magic: you go out and find things."
+    systems: [NexusDungeons, NexusLegends, NexusExpeditions, NexusCompanions, NexusHatchlings, NexusWarbeasts, NexusPortals, NexusMomentum, NexusMagic, NexusWands, NexusEnchants, NexusLode, NexusGrave, NexusMinds, NexusGiants, NexusEvents, NexusMobCrossbow]
+  survivor:
+    title: "Survivor"
+    icon: CAMPFIRE
+    blurb: "Hard mode: thirst, injury, cold, nights that matter and a world that fights back."
+    systems: [NexusSurvival, NexusVitals, NexusHydro, NexusIntegrity, NexusHorror, NexusSomnus, NexusRime, NexusGrave, NexusMinds, NexusGiants, NexusMigrations, NexusWards, NexusRequiem, NexusUndertow, NexusEvents, NexusCombat, NexusCuisine, NexusForge, NexusWeatherReport]
+  warrior:
+    title: "Warrior & Politician"
+    icon: NETHERITE_SWORD
+    blurb: "Houses, keeps, bounties and big fights: you play for power."
+    systems: [NexusHouses, NexusWarfare, NexusFrontier, NexusCombat, NexusDrones, NexusLegion, NexusBloodline, NexusMorality, NexusForge, NexusGrave, NexusWarbeasts, NexusMobCrossbow]
+  social:
+    title: "Social & Roleplay"
+    icon: PLAYER_HEAD
+    blurb: "Family, rumours, ceremony and the stories a community tells about itself."
+    systems: [NexusFamily, NexusBloodline, NexusBathroom, NexusEchoes, NexusMorality, NexusFolklore, NexusCitizens, NexusPulse, NexusChronicle, NexusOracle, NexusDecor, NexusStyle, NexusHats, NexusVice, NexusHouses, NexusGrowth, NexusAmbience]
+  spooky:
+    title: "Strange & Spooky"
+    icon: SOUL_LANTERN
+    blurb: "Odd things happen and not everything is explained."
+    systems: [NexusOddities, NexusPareidolia, NexusArrival, NexusWildcard, NexusChaos, NexusHorror, NexusRequiem, NexusFolklore, NexusThreshold, NexusOracle, NexusUndertow, NexusAmbience, NexusKairos, NexusPennywise]
+  relaxed:
+    title: "Relaxed Vanilla-plus"
+    icon: OAK_SAPLING
+    blurb: "As close to plain Minecraft as this server gets: a few comforts and nothing that bites."
+    systems: [NexusAmbience, NexusHats, NexusStyle, NexusSomnus, NexusWeatherReport]
